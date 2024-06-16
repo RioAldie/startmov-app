@@ -4,15 +4,15 @@ import { PlayIcon } from '@heroicons/react/24/solid';
 
 const Hero = () => {
   return (
-    <div className="bg-cover w-full border h-[800px] flex justify-center text-center">
+    <div className="bg-cover w-full  h-[800px] flex justify-center text-center">
       <Image
         src="/images/bg-thumbnail.png"
-        className="w-full absolute -z-10 object-cover"
+        className="w-full absolute -z-20 object-cover"
         alt="startmov-hero"
         width={1000}
         height={800}
       />
-      <div className="absolute -bottom-10 left-0 w-full h-20 bg-gradient-to-t from-black via-black/75 to-transparent blur-sm"></div>
+      <div className="-z-10 absolute -bottom-10 left-0 w-full h-20 bg-gradient-to-t from-black via-black/75 to-transparent blur-sm"></div>
       <div className="mt-96 p-36 flex flex-col gap-4 items-center">
         <p className="text-5xl font-bold text-white">
           The Best Streaming Experience

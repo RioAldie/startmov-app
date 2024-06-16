@@ -2,7 +2,7 @@
 
 export function Appbar() {
   return (
-    <nav className="bg-none top-0 w-full absolute">
+    <nav className="bg-none top-0 w-full fixed z-30">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="https://flowbite.com/"
@@ -13,7 +13,7 @@ export function Appbar() {
             alt="startmov Logo"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Startmov
+            StartMov
           </span>
         </a>
         <div className="flex md:order-2">
@@ -114,7 +114,7 @@ export function Appbar() {
               placeholder="Search..."
             />
           </div>
-          <ul className="flex flex-col p-2 md:p- mt-4 font-medium border rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-[3px] md:border-neutral-700 ">
+          <ul className="flex flex-col p-2 md:p- mt-4 font-medium border bg-[#141414] rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-[3px] md:border-neutral-700 ">
             <li>
               <a
                 href="#"
