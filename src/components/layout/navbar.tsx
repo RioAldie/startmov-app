@@ -1,11 +1,13 @@
 'use client';
 
+import Link from 'next/link';
+
 export function Appbar() {
   return (
     <nav className="bg-none top-0 w-full fixed z-30">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a
-          href="https://flowbite.com/"
+        <Link
+          href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
             src="/icons/startmov-icon.svg"
@@ -15,7 +17,7 @@ export function Appbar() {
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             StartMov
           </span>
-        </a>
+        </Link>
         <div className="flex md:order-2">
           <button
             type="button"
@@ -49,9 +51,9 @@ export function Appbar() {
                 viewBox="0 0 20 20">
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                 />
               </svg>
@@ -79,9 +81,9 @@ export function Appbar() {
               viewBox="0 0 17 14">
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
@@ -100,9 +102,9 @@ export function Appbar() {
                 viewBox="0 0 20 20">
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                 />
               </svg>
@@ -124,12 +126,12 @@ export function Appbar() {
               </a>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                href="/movies"
                 className="block p-2 text-gray-400  rounded hover:md:bg-neutral-800 hover:md:text-green-700 hover:md:dark:text-green-500"
                 aria-current="page">
                 Movies
-              </a>
+              </Link>
             </li>
             <li>
               <a
