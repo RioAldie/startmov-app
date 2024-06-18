@@ -10,6 +10,7 @@ import {
 import { useEffect, useState } from 'react';
 import CardMovie from '../card/cardMovie';
 import { CarouselTypes, MovieCardTypes } from '@/utils/types';
+import Link from 'next/link';
 
 const Caraousel = (props: CarouselTypes) => {
   const [slide, setSlide] = useState(1);
@@ -39,8 +40,8 @@ const Caraousel = (props: CarouselTypes) => {
   console.log(movies);
 
   return (
-    <div className="flex justify-start flex-col w-full p-5 gap-5">
-      <div className="flex flex-row justify-between">
+    <div className="flex justify-start flex-col w-full p-5 gap-5 items-center">
+      <div className="flex w-full flex-row justify-between">
         <p className="text-xl font-bold">{genre}</p>
         <div className="flex flex-row gap-1 items-center">
           {slide > 1 && (
@@ -124,6 +125,11 @@ const Caraousel = (props: CarouselTypes) => {
           }
         })}
       </div>
+      <Link href={`/movies/${id}`}>
+        <button className="bg-neutral-800 hover:bg-neutral-900 text-white w-40 h-9 rounded-md">
+          More
+        </button>
+      </Link>
     </div>
   );
 };

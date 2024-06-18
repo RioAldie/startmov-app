@@ -27,3 +27,7 @@ export interface CarouselTypes {
   genre: string;
   id: string;
 }
+export interface PaginationTypes {
+  page: number;
+  handlePage: (page: number) => void;
+}
