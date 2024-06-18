@@ -22,7 +22,8 @@ const Caraousel = (props: CarouselTypes) => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await getMoviesByGenre(id);
+        setLoading(true);
+        const data = await getMoviesByGenre(id, 1);
 
         setMovies(data);
       } catch (error: any) {

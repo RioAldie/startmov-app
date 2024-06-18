@@ -15,10 +15,13 @@ export const getPopularMovies = async () => {
     throw new Error('something is wrong!');
   }
 };
-export const getMoviesByGenre = async (genre: string) => {
+export const getMoviesByGenre = async (
+  genre: string,
+  page: number
+) => {
   try {
     const response = await axios.get(
-      `https://api.themoviedb.org/3/discover/movie?${process.env.NEXT_PUBLIC_API_KEY}&with_genres=${genre}`
+      `https://api.themoviedb.org/3/discover/movie?${process.env.NEXT_PUBLIC_API_KEY}&with_genres=${genre}&page=${page}`
     );
 
     if (response.status > 300) {

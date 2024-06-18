@@ -15,13 +15,17 @@ const MoviesContainer = (props: moviesContainerProps) => {
   const [page, setPage] = useState(1);
 
   const handleChangePage = (page: number) => {
-    setPage(page);
+    console.log(page);
+    if (page > 0 && page <= 5) {
+      setPage(page);
+    }
   };
 
   useEffect(() => {
     async function fetchData() {
+      setLoading(true);
       try {
-        const data = await getMoviesByGenre(props.id);
+        const data = await getMoviesByGenre(props.id, page);
 
         setMovies(data);
       } catch (error: any) {
@@ -32,7 +36,7 @@ const MoviesContainer = (props: moviesContainerProps) => {
     }
 
     fetchData();
-  }, []);
+  }, [page]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;

@@ -5,7 +5,7 @@ import Navlink from './navlink';
 
 export function Appbar() {
   return (
-    <nav className="bg-none top-0 w-full fixed z-30">
+    <nav className="bg-none top-0 w-full fixed z-30 bg-neutral-900/[0.4] ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
           href="/"
