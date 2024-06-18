@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Navlink from './navlink';
 
 export function Appbar() {
   return (
@@ -117,38 +118,9 @@ export function Appbar() {
             />
           </div>
           <ul className="flex flex-col p-2 md:p- mt-4 font-medium border bg-[#141414] rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-[3px] md:border-neutral-700 ">
-            <li>
-              <a
-                href="#"
-                className="block p-2 text-white bg-green-700 rounded md:bg-neutral-800 md:text-green-700 md:dark:text-green-500"
-                aria-current="page">
-                Home
-              </a>
-            </li>
-            <li>
-              <Link
-                href="/movies"
-                className="block p-2 text-gray-400  rounded hover:md:bg-neutral-800 hover:md:text-green-700 hover:md:dark:text-green-500"
-                aria-current="page">
-                Movies
-              </Link>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block p-2 text-gray-400  rounded hover:md:bg-neutral-800 hover:md:text-green-700 hover:md:dark:text-green-500"
-                aria-current="page">
-                Support
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block p-2 text-gray-400  rounded hover:md:bg-neutral-800 hover:md:text-green-700 hover:md:dark:text-green-500"
-                aria-current="page">
-                Subscriptions
-              </a>
-            </li>
+            <Navlink path={'/'} name={'Home'} />
+            <Navlink path={'/movies'} name={'Movies'} />
+            <Navlink path={'/support'} name={'Support'} />
           </ul>
         </div>
       </div>
