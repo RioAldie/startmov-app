@@ -51,7 +51,7 @@ export const getMovieDetail = async (id: string) => {
 export const getMovieByQuery = async (query: string | undefined) => {
   try {
     const response = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=10badd151dbb806d6e12dd2bf5f10f9d&query="${query}"`
+      `https://api.themoviedb.org/3/search/movie?${process.env.NEXT_PUBLIC_API_KEY}&query="${query}"`
     );
 
     if (response.status > 300) {
