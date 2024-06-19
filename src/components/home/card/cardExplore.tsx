@@ -1,15 +1,17 @@
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface cardExploreProps {
   image: string;
   genre: string;
+  id: string;
 }
 const CardExplore = (props: cardExploreProps) => {
-  const { image, genre } = props;
+  const { image, genre, id } = props;
   return (
-    <a href="#">
+    <Link href={`/movies/${id}`}>
       <div className="p-4 rounded-lg border border-neutral-700 bg-neutral-900 hover:bg-neutral-950">
         <Image
           src={image}
@@ -22,7 +24,7 @@ const CardExplore = (props: cardExploreProps) => {
           <ArrowRightIcon className="size-5 font-bold text-white" />
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

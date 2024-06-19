@@ -5,6 +5,7 @@ type GenreId =
   | '28'
   | '12'
   | '18'
+  | '16'
   | '35'
   | '80'
   | '99'
@@ -30,6 +31,7 @@ const CategoryPage = ({ params }: { params: { id: string } }) => {
   const genreMap: GenreMap = {
     '28': 'Action',
     '12': 'Adventure',
+    '16': 'Animation',
     '18': 'Drama',
     '35': 'Comedy',
     '80': 'Crime',

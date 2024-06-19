@@ -21,6 +21,7 @@ export interface MovieCardTypes {
   poster_path: string;
   vote_average: number;
   popularity: number;
+  title: string;
 }
 
 export interface CarouselTypes {
@@ -30,4 +31,19 @@ export interface CarouselTypes {
 export interface PaginationTypes {
   page: number;
   handlePage: (page: number) => void;
+}
+export interface BannerTypes {
+  poster_path: string;
+  title: string;
+  tagline: string;
+  overview: string;
+  release_date: string;
+  spoken_languages: [];
+  genres: [];
+  production_companies: [];
+  popularity: number;
+  vote_average: number;
+}
+export interface QueryTypes {
+  query: string | undefined;
 }
