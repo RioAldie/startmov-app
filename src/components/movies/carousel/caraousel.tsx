@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react';
 import CardMovie from '../card/cardMovie';
 import { CarouselTypes, MovieCardTypes } from '@/utils/types';
 import Link from 'next/link';
+import MovieSkeleton from '../skeleton/movieSkeleton';
 
 const Caraousel = (props: CarouselTypes) => {
   const [slide, setSlide] = useState(1);
@@ -36,9 +37,16 @@ const Caraousel = (props: CarouselTypes) => {
     fetchData();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading)
+    return (
+      <div className="flex justify-start flex-col w-full p-5 gap-5 items-center">
+        <MovieSkeleton />
+        <MovieSkeleton />
+        <MovieSkeleton />
+        <MovieSkeleton />
+      </div>
+    );
   if (error) return <p>Error: {error}</p>;
-  console.log(movies);
 
   return (
     <div className="flex justify-start flex-col w-full p-5 gap-5 items-center">

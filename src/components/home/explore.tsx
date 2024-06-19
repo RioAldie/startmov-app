@@ -17,22 +17,27 @@ const Explore = () => {
           <CardExplore
             image={'/images/action-mov.png'}
             genre={'Action'}
+            id={'28'}
           />
           <CardExplore
             image={'/images/adventure-mov.png'}
             genre={'Adventure'}
+            id="12"
           />
           <CardExplore
             image={'/images/comedy-mov.png'}
             genre={'Comedy'}
+            id="16"
           />
           <CardExplore
             image={'/images/drama-mov.png'}
             genre={'Drama'}
+            id="18"
           />
           <CardExplore
             image={'/images/horor-mov.png'}
             genre={'Horror'}
+            id="27"
           />
         </div>
       </div>

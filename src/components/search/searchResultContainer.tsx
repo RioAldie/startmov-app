@@ -1,31 +1,19 @@
 'use client';
-import { useEffect, useState } from 'react';
-import CardMovie from './card/cardMovie';
-import { getMoviesByGenre, getPopularMovies } from '@/lib/movies';
-import { MovieCardTypes } from '@/utils/types';
-import Pagination from './pagination';
-import MovieSkeleton from './skeleton/movieSkeleton';
+import { MovieCardTypes, QueryTypes } from '@/utils/types';
+import { FC, useEffect, useState } from 'react';
+import CardMovie from '../movies/card/cardMovie';
+import { getMovieByQuery } from '@/lib/movies';
 
-interface moviesContainerProps {
-  id: string;
-}
-const MoviesContainer = (props: moviesContainerProps) => {
+const SearchResultContainer: FC<QueryTypes> = ({ query }) => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [page, setPage] = useState(1);
-
-  const handleChangePage = (page: number) => {
-    if (page > 0 && page <= 5) {
-      setPage(page);
-    }
-  };
 
   useEffect(() => {
     async function fetchData() {
       setLoading(true);
       try {
-        const data = await getMoviesByGenre(props.id, page);
+        const data = await getMovieByQuery(query);
 
         setMovies(data);
       } catch (error: any) {
@@ -36,16 +24,13 @@ const MoviesContainer = (props: moviesContainerProps) => {
     }
 
     fetchData();
-  }, [page]);
+  }, [query]);
 
   if (loading)
     return (
       <div className="w-full py-8 h-fit border-[3px] border-neutral-800 flex flex-row items-center justify-center flex-wrap p-4 gap-5">
         {' '}
-        <MovieSkeleton />
-        <MovieSkeleton />
-        <MovieSkeleton />
-        <MovieSkeleton />
+        <p>Loading...</p>
       </div>
     );
   if (error) return <p>Error: {error}</p>;
@@ -64,9 +49,8 @@ const MoviesContainer = (props: moviesContainerProps) => {
           />
         );
       })}
-      <Pagination page={page} handlePage={handleChangePage} />
     </div>
   );
 };
 
-export default MoviesContainer;
+export default SearchResultContainer;
