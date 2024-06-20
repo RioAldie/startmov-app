@@ -44,7 +44,7 @@ const SearchResultContainer: FC<QueryTypes> = ({ query }) => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="w-full py-8 h-fit border-[3px] border-neutral-800 flex flex-row items-center justify-center flex-wrap md:p-4 p-2 md:gap-5 gap-2">
+    <div className="w-full  h-fit border-[3px] border-neutral-800 flex flex-row items-center justify-center flex-wrap md:p-10 p-2 md:gap-5 gap-2">
       {movies?.map((movie: MovieCardTypes, i) => {
         return (
           <CardMovie

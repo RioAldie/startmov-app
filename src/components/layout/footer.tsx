@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
@@ -6,10 +8,12 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0 flex flex-row justify-start md:justify-center items-center ">
-            <img
+            <Image
               src="/icons/startmov-icon.svg"
-              className="h-8 me-3"
+              className="h-8 "
               alt="FlowBite Logo"
+              width={40}
+              height={40}
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               StartMov
@@ -22,19 +26,19 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="/" className="hover:underline">
+                  <Link href="/" className="hover:underline">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/movies" className="hover:underline">
+                  <Link href="/movies" className="hover:underline">
                     Movies
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/support" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Support
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -44,11 +48,11 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a
-                    href="https://github.com/themesberg/flowbite"
+                  <Link
+                    href="https://github.com/RioAldie/startmov-app"
                     className="hover:underline ">
                     Github
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

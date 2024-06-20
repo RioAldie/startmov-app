@@ -8,6 +8,7 @@ import {
   MagnifyingGlassIcon,
 } from '@heroicons/react/24/solid';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export function Appbar() {
   const [active, setActive] = useState(false);
@@ -17,10 +18,12 @@ export function Appbar() {
         <Link
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
+          <Image
             src="/icons/startmov-icon.svg"
             className="h-8"
             alt="startmov Logo"
+            width={30}
+            height={30}
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             StartMov
