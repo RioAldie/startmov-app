@@ -41,7 +41,7 @@ const MoviePage = ({ params }: { params: { movie: string } }) => {
   console.log(movieDetail);
   return (
     <main className="mb-56 mt-32">
-      <div className="w-full px-20">
+      <div className="w-full md:px-20 px-2">
         {movieDetail && (
           <Banner
             poster_path={movieDetail.poster_path}
