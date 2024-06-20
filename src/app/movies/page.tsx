@@ -6,8 +6,8 @@ import React from 'react';
 
 const MoviesPage = async () => {
   return (
-    <main className="mb-56 p-20 mt-40">
-      <div className="w-full p-20">
+    <main className="mb-56 md:p-20 mt-40">
+      <div className="w-full md:p-20 p-5">
         <p className="py-2 px-5 w-fit bg-green-600 rounded-md ml-5 -mt-5 absolute">
           Movies
         </p>

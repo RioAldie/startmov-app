@@ -4,10 +4,11 @@ import { usePathname, useRouter } from 'next/navigation';
 interface navLinkProps {
   path: string;
   name: string;
+  setActive: (active: boolean) => void;
 }
 const Navlink = (props: navLinkProps) => {
   const router = usePathname();
-  const { path, name } = props;
+  const { path, name, setActive } = props;
 
   const linkStyle = {
     active:
@@ -19,6 +20,7 @@ const Navlink = (props: navLinkProps) => {
     <li>
       <Link
         href={path}
+        onClick={() => setActive(false)}
         className={
           router === path ? linkStyle.active : linkStyle.notActive
         }
