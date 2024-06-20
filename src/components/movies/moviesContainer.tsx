@@ -51,7 +51,7 @@ const MoviesContainer = (props: moviesContainerProps) => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="w-full py-8 h-fit border-[3px] border-neutral-800 flex flex-row items-center justify-center flex-wrap p-4 gap-5">
+    <div className="w-full py-8 h-fit border-[3px] border-neutral-800 flex flex-row items-center justify-center flex-wrap md:p-4 p-0 md:gap-5 gap-2 ">
       {movies?.map((movie: MovieCardTypes, i) => {
         return (
           <CardMovie

@@ -1,6 +1,5 @@
 'use client';
 
-import CardExplore from '@/components/home/card/cardExplore';
 import { getMoviesByGenre } from '@/lib/movies';
 import {
   ArrowLeftIcon,
@@ -86,7 +85,7 @@ const Caraousel = (props: CarouselTypes) => {
           </button>
         </div>
       </div>
-      <div className="flex flex-row gap-4 justify-around">
+      <div className="flex w-full flex-row gap-4 justify-around overflow-x-scroll md:overflow-hidden">
         {movies?.map((movie: MovieCardTypes, i) => {
           if (i < 5 && slide == 1) {
             return (
@@ -96,6 +95,7 @@ const Caraousel = (props: CarouselTypes) => {
                 poster_path={movie.poster_path}
                 vote_average={movie.vote_average}
                 popularity={movie.popularity}
+                title={movie.title}
               />
             );
           }
@@ -107,6 +107,7 @@ const Caraousel = (props: CarouselTypes) => {
                 poster_path={movie.poster_path}
                 vote_average={movie.vote_average}
                 popularity={movie.popularity}
+                title={movie.title}
               />
             );
           }
@@ -118,6 +119,7 @@ const Caraousel = (props: CarouselTypes) => {
                 poster_path={movie.poster_path}
                 vote_average={movie.vote_average}
                 popularity={movie.popularity}
+                title={movie.title}
               />
             );
           }
@@ -129,6 +131,7 @@ const Caraousel = (props: CarouselTypes) => {
                 poster_path={movie.poster_path}
                 vote_average={movie.vote_average}
                 popularity={movie.popularity}
+                title={movie.title}
               />
             );
           }

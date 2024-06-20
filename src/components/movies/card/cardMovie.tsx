@@ -14,10 +14,11 @@ const CardMovie = (props: MovieCardTypes) => {
         <Image
           src={`http://image.tmdb.org/t/p/w500/${poster_path}`}
           alt={title}
+          className="h-[200px] md:h-fit w-[150px] md:w-fit"
           width={200}
-          height={300}
+          height={200}
         />
-        <div className="flex flex-row justify-between p-2">
+        <div className="flex md:flex-row flex-col justify-between p-2">
           <div className="flex flex-row items-center gap-2">
             <EyeIcon className="size-4 text-white" /> <p>{views}</p>
           </div>

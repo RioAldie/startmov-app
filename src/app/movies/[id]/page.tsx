@@ -57,7 +57,7 @@ const CategoryPage = ({ params }: { params: { id: string } }) => {
   const genre = getGenre(id);
   return (
     <main className="mb-56 mt-56">
-      <div className="w-full p-20">
+      <div className="w-full p-2 md:p-20">
         <p className="py-2 px-5 w-fit bg-green-600 rounded-md ml-5 -mt-5 absolute">
           Movies {genre}
         </p>

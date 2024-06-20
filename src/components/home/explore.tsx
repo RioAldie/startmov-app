@@ -3,17 +3,18 @@ import CardExplore from './card/cardExplore';
 
 const Explore = () => {
   return (
-    <div className="px-24 mt-40">
-      <div className="flex flex-col justify-start items-start">
-        <p className="text-2xl  font-bold text-white">
+    <div className="md:px-24 p-4 mt-56">
+      <div className="flex flex-col justify-arround items-start">
+        <p className=" w-full text-center lg:text-start text-2xl  font-bold text-white">
           Explore our wide variety of categories
         </p>
-        <p className="text-sm text-neutral-400 mt-3">
+        <p className="w-full lg:text-start text-center text-sm text-neutral-400 mt-3">
           Whether you're looking for a comedy to make you laugh, a
           drama to make you think, or a documentary to learn something
           new
         </p>
-        <div className="mt-14 flex flex-row justify-center gap-5">
+
+        <div className="mt-14 w-full  flex  md:flex-row flex-wrap md:justify-between justify-center gap-5">
           <CardExplore
             image={'/images/action-mov.png'}
             genre={'Action'}

@@ -22,7 +22,7 @@ const Banner: FC<BannerTypes> = ({
   vote_average,
 }) => {
   return (
-    <div className="w-full flex justify-center flex-row items-center">
+    <div className="w-full flex justify-center flex-col md:flex-row items-center">
       <div className="p-4   overflow-hidden  -z-20">
         <Image
           alt=""
@@ -33,7 +33,7 @@ const Banner: FC<BannerTypes> = ({
         />
       </div>
 
-      <div className="w-3/4 px-12 py-5 flex flex-col gap-4 items-start">
+      <div className="md:w-3/4 w-full px-0 md:px-12 py-5 flex flex-col gap-4 items-start">
         <div className=" w-full flex p-5 flex-col gap-4 items-start bg-neutral-900">
           <p className="text-4xl font-bold text-white">{title}</p>
           <p className="text-xl text-neutral-300 text-start max-w-[800px]">
@@ -59,7 +59,7 @@ const Banner: FC<BannerTypes> = ({
               {' '}
               <LanguageIcon className="size-5 " /> Languages
             </p>
-            <div className="flex flex-row justify-start gap-2">
+            <div className="flex flex-wrap  flex-row justify-start gap-2">
               {spoken_languages.map((lang: { name: string }, i) => {
                 return (
                   <p
@@ -87,7 +87,7 @@ const Banner: FC<BannerTypes> = ({
               {' '}
               <SquaresPlusIcon className="size-5" /> Genres
             </p>
-            <div className="flex flex-row justify-start gap-2">
+            <div className="flex flex-wrap  flex-row justify-start gap-2">
               {genres.map((genre: { name: string }, i) => {
                 return (
                   <p
@@ -105,7 +105,7 @@ const Banner: FC<BannerTypes> = ({
               Production Company
             </p>
 
-            <div className="flex flex-row justify-start gap-2">
+            <div className="flex flex-row flex-wrap justify-start gap-2">
               {production_companies.map(
                 (company: { name: string }, i) => {
                   return (
