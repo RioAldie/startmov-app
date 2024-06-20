@@ -48,7 +48,7 @@ export const getMovieDetail = async (id: string) => {
     throw new Error('something is wrong!');
   }
 };
-export const getMovieByQuery = async (query: string | undefined) => {
+export const getMovieByQuery = async (query: any) => {
   try {
     const response = await axios.get(
       `https://api.themoviedb.org/3/search/movie?${process.env.NEXT_PUBLIC_API_KEY}&query="${query}"`

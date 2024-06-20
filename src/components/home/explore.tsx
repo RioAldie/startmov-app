@@ -9,9 +9,7 @@ const Explore = () => {
           Explore our wide variety of categories
         </p>
         <p className="w-full lg:text-start text-center text-sm text-neutral-400 mt-3">
-          Whether you're looking for a comedy to make you laugh, a
-          drama to make you think, or a documentary to learn something
-          new
+          Find a movies based by your favorite genre
         </p>
 
         <div className="mt-14 w-full  flex  md:flex-row flex-wrap md:justify-between justify-center gap-5">
