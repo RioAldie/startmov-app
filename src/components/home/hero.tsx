@@ -15,21 +15,20 @@ const Hero = () => {
       <div className="-z-10 absolute -bottom-10 left-0 w-full h-20 bg-gradient-to-t from-black via-black/75 to-transparent blur-sm"></div>
       <div className="mt-96 md:p-36 p-5 flex flex-col gap-4 items-center">
         <p className="text-5xl font-bold text-white">
-          The Best Streaming Experience
+          Find a Best Movies from TMDB
         </p>
         <p className="text-sm text-neutral-400">
-          StreamVibe is the best streaming experience for watching
-          your favorite movies and shows on demand, anytime, anywhere.
-          With StreamVibe, you can enjoy a wide variety of content,
-          including the latest blockbusters, classic movies, popular
-          TV shows, and more. You can also create your own watchlists,
-          so you can easily find the content you want to watch.
+          StartMov help you to find Best Movies from The Movies
+          Database more quickly, accurate, anytime, anywhere. With
+          StartMov, you can get information about the new movies
+          release, the populer movies or find the movie information
+          that you want to watch.
         </p>
         <button
           type="button"
           className="text-white w-56 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
           <PlayIcon className="size-6 text-white" />
-          Start Watching Now
+          Start Find Movie Now
         </button>
       </div>
     </div>
