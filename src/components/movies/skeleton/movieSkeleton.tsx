@@ -4,6 +4,7 @@ const MovieSkeleton = () => {
   return (
     <div
       role="status"
+      id="loading"
       className="max-w-sm p-4 border border-neutral-200 rounded shadow animate-pulse md:p-6 dark:border-neutral-700">
       <div className="flex items-center justify-center h-48 mb-4 bg-neutral-300 rounded dark:bg-neutral-700">
         <svg

@@ -11,7 +11,10 @@ const MoviesPage = async () => {
         <p className="py-2 px-5 w-fit bg-green-600 rounded-md ml-5 -mt-5 absolute">
           Movies
         </p>
-        <div className="w-full py-8 h-fit border-[3px] border-neutral-800 flex flex-column items-center justify-center flex-wrap p-4 gap-5">
+        <div
+          data-testid="carousels"
+          className="w-full py-8 h-fit border-[3px] border-neutral-800 flex flex-column items-center justify-center flex-wrap p-4 gap-5">
+          Carousels
           <Caraousel genre={'Action'} id={'28'} />
           <Caraousel genre={'Drama'} id={'18'} />
           <Caraousel genre={'Horror'} id={'27'} />
